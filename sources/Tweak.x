@@ -5,7 +5,6 @@
 #import "GonerinoActionList.h"
 #import "Localization.h"
 #import "Tweak.h"
-#import "UpdateChecker.h"
 
 static id                ValueForObjectKey(id object, NSString *key);
 static id                DirectObjectIvar(id object, NSString *key);
@@ -1911,7 +1910,6 @@ static void RefreshNavigationButtons(void)
 %ctor
 {
     %init;
-   // GonerinoStartUpdateChecker();
     [[NSNotificationCenter defaultCenter]
         addObserverForName:FeedFilterStateDidChangeNotification
                     object:nil
