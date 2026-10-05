@@ -141,6 +141,9 @@ static void GonerinoCheckLatestRelease(void)
 
 void GonerinoStartUpdateChecker(void)
 {
+    // No-Notification build: launch-time update check and update notification are disabled.
+    return;
+
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
